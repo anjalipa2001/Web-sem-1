@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <table>
+            <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+                <tr>
+                    <td>
+                        <h1> Form</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td> user_id </td>
+                    <td><input type="text" class="" name="user_id" id="user_id">  </td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td> <input type="text" name="name" class="" id="name"> </td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td> <input type="password" name="password" class="" id="password"> </td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td> <input type="text" class="" name="Address" id="Address"> </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td> <select name="c" id="Country">
+                            <option name="c" id="Country" value="India">India</option>
+                            <option name="c" id="Country" value="Japan">Japan</option>
+                            <option name="c" id=" Country" value="Canada">Canada</option>
+                        </select> </td>
+                </tr>
+                <tr>
+                    <td>Zip code </td>
+                    <td> <input type="text" class="" name="zip" id="zipcode"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td> <input type="email" class="" name="email" id="email"> </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td> <input type="radio" name="gender" class="" value="male" id="male"><label
+                            for="male">Male</label>
+                        <input type="radio" class="" name="gender" value="Female" id="Female"><label
+                            for="Female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="about"> About</label></td>
+                    <td> <textarea name="about" id="about" cols="30" rows="5"></textarea> </td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" name="" value="submit" id=""></td>
+                </tr>
+            </form>
+
+
+        </table>
+
+    </div>
+
+    <script>
+	
+	const userid = document.getElementById("user_id");
+    const name = document.getElementById("name");
+const password = document.getElementById("password");
+const email = document.getElementById("email");
+const gender = document.registration;
+const language = document.getElementById("Country");
+const zipcode = document.getElementById("zipcode");
+function formValidation() 
+{
+  
+  if (name.value.length < 2 || name.value.length > 20) {
+    alert("Name length should be more than 2 and less than 21");
+    name.focus();
+    return false;
+  }
+   if (!password.value.match(/^.{5,15}$/)) {
+    alert("Password length must be between 5-15 characters!");
+    password.focus();
+    return false;
+  }
+   if (email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+    alert("Please enter a valid email!");
+    email.focus();
+    return false;
+  }
+  if (gender.gender.value === "") {
+    alert("Please select your gender!");
+    return false;
+  }
+  if (country.value === "") {
+    alert("Please select your language!")
+    return false;
+  }
+  if (!zipcode.value.match(/^[0-9]{6}$/)) {
+    alert("Zip code must be 6 characters long number!");
+    zipcode.focus();
+    return false;
+  }
+  return true;
+}
+
+	     
+           </script>
+</body>
+
+</html>
