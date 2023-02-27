@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>CALCULATOR</title>
+<body bgcolor="pink"><center>
+<style>
+h1{
+text-align: center;
+color:red;
+padding :20px;
+}
+</style>
+<form name="forms">
+<h1>CALCULATOR</h1>
+<table border='1'>
+<tr>
+<td colspan="4"><input id="calc" type="textbox" name="display" style="height:60px;width:250px"></td>
+</tr>
+<tr>
+<td><input type="button" value="1" onclick="forms.display.value +='1'" style="height:60px;width:60px"></td>
+<td><input type="button" value="2" onclick="forms.display.value +='2'" style="height:60px;width:60px"></td>
+<td><input type="button" value="3" onclick="forms.display.value +='3'" style="height:60px;width:60px"></td>
+<td><input type="button" value="+" onclick="forms.display.value +='+'" style="height:60px;width:60px"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="4" onclick="forms.display.value +='4'" style="height:60px;width:60px"></td>
+<td><input type="button" value="5" onclick="forms.display.value +='5'" style="height:60px;width:60px"></td>
+<td><input type="button" value="6" onclick="forms.display.value +='6'" style="height:60px;width:60px"></td>
+<td><input type="button" value="-" onclick="forms.display.value +='-'" style="height:60px;width:60px"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="7" onclick="forms.display.value +='7'" style="height:60px;width:60px"></td>
+<td><input type="button" value="8" onclick="forms.display.value +='8'" style="height:60px;width:60px"></td>
+<td><input type="button" value="9" onclick="forms.display.value +='9'" style="height:60px;width:60px"></td>
+<td><input type="button" value="*" onclick="forms.display.value +='*'" style="height:60px;width:60px"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="0" onclick="forms.display.value +='0'" style="height:60px;width:60px"></td>
+<td><input type="button" value="/" onclick="forms.display.value +='/'" style="height:60px;width:60px"></td>
+<td><input type="button" value="%" onclick="forms.display.value +='%'" style="height:60px;width:60px"></td>
+<td><input type="button" value="." onclick="forms.display.value +='.'" style="height:60px;width:60px"></td>
+</tr>
+<tr>
+<td colspan="3"><input type="button" value="Reset" onclick = "forms.display.value = ' ' " id= "clear""></td>
+<td colspan="1"><input type="button" value="=" onclick="forms.display.value = eval(forms.display.value)" ></td>
+</tr>
+
+</table>
+</center>
+</form>
+</body>
+</html>
+
+
+
